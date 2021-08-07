@@ -16,26 +16,74 @@
     width: 300px;
     border-radius: 15px;
     background-color: #fff;
-    border: 1px solid green;
+    border: 1px none;
     overflow: hidden; }
+    @media (min-width: 1440px) {
+      .container .card {
+        width: 400px; } }
     .container .card .hero img {
       width: 100%; }
     .container .card .summary {
-      padding: 1.5em;
+      padding: 1.6em;
       text-align: center; }
       .container .card .summary h2 {
-        margin-bottom: .5em; }
+        margin-bottom: .5em;
+        color: #1f2f56; }
+      .container .card .summary p {
+        color: #7280a7; }
     .container .card .plan {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin: .5em auto;
-      border: 1px solid red;
+      width: 90%;
+      border-radius: 10px;
+      border: none;
+      background-color: #f5f7ff;
       padding: 1em .5em; }
       .container .card .plan .price-plan {
         flex-basis: 60%;
         display: flex;
         gap: 1em;
-        border: 1px solid green; }
+        border: none; }
+        .container .card .plan .price-plan .price p {
+          font-size: .9em;
+          font-weight: 900;
+          margin-bottom: .2em;
+          color: #1f2f56; }
+          .container .card .plan .price-plan .price p span {
+            color: #7280a7;
+            font-weight: 500; }
       .container .card .plan .change {
         align-content: flex-end; }
+        .container .card .plan .change a {
+          color: #3829e0;
+          font-weight: 600; }
+          .container .card .plan .change a:hover {
+            color: #7280a7; }
+    .container .card .payment {
+      margin: 1em;
+      display: grid;
+      gap: 1em; }
+      .container .card .payment button {
+        cursor: pointer;
+        transition: .2s;
+        border: none;
+        outline: none; }
+      .container .card .payment #proceed {
+        background-color: #3829e0;
+        color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px #7280a7;
+        padding: 1em;
+        font-weight: 600; }
+        .container .card .payment #proceed:hover {
+          background-color: #7280a7; }
+      .container .card .payment #cancel {
+        font-weight: 600;
+        border: none;
+        outline: none;
+        color: #7280a7;
+        background-color: #fff; }
+        .container .card .payment #cancel:hover {
+          color: #1f2f56; }

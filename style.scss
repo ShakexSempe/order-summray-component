@@ -14,9 +14,13 @@
 
     .card {
         width: 300px;
+        @media (min-width: 1440px){
+            width: 400px;
+        }
+
         border-radius: 15px;
         background-color: #fff;
-        border: 1px solid green;
+        border: 1px none;
         overflow: hidden;
 
         .hero {
@@ -25,11 +29,17 @@
             }
         }
         .summary {
-            padding: 1.5em;
+            padding: 1.6em;
             text-align: center;
 
             h2 {
                 margin-bottom: .5em;
+                color: $neutral-dark-blue;
+            }
+
+            p {
+                color: $neutral-desaturated-blue;
+
             }
         }
 
@@ -38,19 +48,80 @@
             justify-content: space-between;
             align-items: center;
             margin: .5em auto;
-            border: 1px solid red;
+            width: 90%;
+            border-radius: 10px;
+            border: none;
+            background-color: $neutral-pale-blue;
             padding: 1em .5em;
-
             .price-plan {
                 flex-basis: 60%;
                 display: flex;
                 gap: 1em;
-                border: 1px solid green;
-                
+                border: none;
+                .price {
+                    p {
+                        font-size: .9em;
+                        font-weight: 900;
+                        margin-bottom: .2em;
+                        color: $neutral-dark-blue;
+
+                        span {
+                            color:$neutral-desaturated-blue;
+                            font-weight: 500;
+                        }
+                    }
+                }
             }
 
             .change {
                 align-content: flex-end;
+
+                a {
+                    color: $primary-blue-bright;
+                    font-weight: 600;
+                    &:hover {
+                        color: $neutral-desaturated-blue;
+                    }
+                }
+                
+            }
+
+        }
+        .payment {
+            margin: 1em;
+            display: grid;
+            gap: 1em;
+
+            button {
+                cursor: pointer;
+                transition: .2s;
+                border: none;
+                outline: none;
+            }
+
+            #proceed {
+                background-color: $primary-blue-bright;
+                color: #fff;
+                border-radius: 15px;
+                box-shadow: 0 5px 20px $neutral-desaturated-blue;
+                
+                padding: 1em ;
+                font-weight: 600;
+                &:hover {
+                    background-color: $neutral-desaturated-blue;
+                }
+
+            }
+            #cancel {
+                font-weight: 600;
+                border: none;
+                outline: none;
+                color: $neutral-desaturated-blue;
+                background-color: #fff;
+
+                &:hover {
+                    color: $neutral-dark-blue;
+                }
             }
         }
     }
