@@ -63,10 +63,30 @@
       .container .card .plan .change {
         align-content: flex-end; }
         .container .card .plan .change a {
-          color: #3829e0;
-          font-weight: 600; }
+          color: #fff;
+          background-color: #3829e0;
+          padding: .2em .5em;
+          border-radius: 10px;
+          font-weight: 600;
+          font-size: .9em;
+          text-decoration: none;
+          display: block;
+          position: relative; }
+          .container .card .plan .change a::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: inset 2px 2px 3px #ddda, inset -2px -2px 3px #000a; }
           .container .card .plan .change a:hover {
+            background-color: #f5f7ff;
             color: #7280a7; }
+          .container .card .plan .change a:active {
+            transition: .2s;
+            transform: scale(0.9); }
     .container .card .payment {
       margin: 1em;
       display: grid;

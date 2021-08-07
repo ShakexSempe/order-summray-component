@@ -87,11 +87,35 @@
             .change {
                 align-content: flex-end;
 
+
                 a {
-                    color: $primary-blue-bright;
+                    color: $text-light;
+                    background-color: $primary-blue-bright;
+                    padding: .2em .5em;
+                    border-radius: 10px;
                     font-weight: 600;
+                    font-size: .9em;
+                    text-decoration: none;
+                    display: block;
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                        box-shadow: inset 2px 2px 3px #ddda,
+                                    inset -2px -2px 3px #000a;
+                    }
                     &:hover {
+                        background-color: $neutral-pale-blue;
                         color: $neutral-desaturated-blue;
+                    }
+                    &:active {
+                        transition: .2s;
+                        transform: scale(.9);
                     }
                 }
                 
