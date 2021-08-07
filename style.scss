@@ -1,0 +1,60 @@
+@import 'variables';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/pattern-background-desktop.svg);
+    display: grid;
+    place-items: center;
+
+    .card {
+        width: 300px;
+        border-radius: 15px;
+        background-color: #fff;
+        border: 1px solid green;
+        overflow: hidden;
+
+        .hero {
+            img {
+                width: 100%;
+            }
+        }
+        .summary {
+            padding: 1.5em;
+            text-align: center;
+
+            h2 {
+                margin-bottom: .5em;
+            }
+        }
+
+        .plan {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: .5em auto;
+            border: 1px solid red;
+            padding: 1em .5em;
+
+            .price-plan {
+                flex-basis: 60%;
+                display: flex;
+                gap: 1em;
+                border: 1px solid green;
+                
+            }
+
+            .change {
+                align-content: flex-end;
+            }
+        }
+    }
+    
+    
+    overflow: hidden;
+}

@@ -1,1 +1,41 @@
-/* No CSS */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif; }
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../images/pattern-background-desktop.svg);
+  display: grid;
+  place-items: center;
+  overflow: hidden; }
+  .container .card {
+    width: 300px;
+    border-radius: 15px;
+    background-color: #fff;
+    border: 1px solid green;
+    overflow: hidden; }
+    .container .card .hero img {
+      width: 100%; }
+    .container .card .summary {
+      padding: 1.5em;
+      text-align: center; }
+      .container .card .summary h2 {
+        margin-bottom: .5em; }
+    .container .card .plan {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: .5em auto;
+      border: 1px solid red;
+      padding: 1em .5em; }
+      .container .card .plan .price-plan {
+        flex-basis: 60%;
+        display: flex;
+        gap: 1em;
+        border: 1px solid green; }
+      .container .card .plan .change {
+        align-content: flex-end; }
