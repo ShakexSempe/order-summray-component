@@ -9,10 +9,11 @@
     width: 100%;
     min-height: 100vh;
     background-image: url(../images/pattern-background-desktop.svg);
-   
+    background-repeat: no-repeat;
+    background-size: contain;
     @media (max-width: 768px ){
-        background-image: url(../images/pattern-background-mobile.svg);
-        background-size: cover;
+        background-image: none;
+        background-color: $primary-blue-pale;
     }
     display: grid;
     place-items: center;
@@ -29,11 +30,25 @@
         background-color: #fff;
         border: 1px none;
         overflow: hidden;
-        box-shadow: 0 10px 15px $neutral-desaturated-blue,
+        box-shadow: 0 20px 10px rgba(5, 94, 129, 0.219),
                     inset 5px 5px 3px #ddd,
-                    inset -5px -5px 3px #333a;
+                    inset -5px -5px 3px rgba(51, 51, 51, 0.61);
 
         .hero {
+            position: relative;
+            &::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+                z-index: 0;
+                box-shadow: inset 5px 5px 3px rgba(255, 255, 255, 0.363),
+                            inset -5px 0px 3px rgba(51, 51, 51, 0.445);
+            }
             img {
                 width: 100%;
             }
@@ -50,7 +65,7 @@
 
             p {
                 color: $neutral-desaturated-blue;
-
+                
             }
         }
 
@@ -64,6 +79,8 @@
             border: none;
             background-color: $neutral-pale-blue;
             padding: 1em .5em;
+            box-shadow: inset 3px 3px 4px rgba(221, 221, 221, 0.349),
+                        inset -3px -3px 4px rgba(0, 0, 0, 0.26);
             .price-plan {
                 flex-basis: 60%;
                 display: flex;
@@ -98,6 +115,7 @@
                     text-decoration: none;
                     display: block;
                     position: relative;
+                    transition: .2s;
                     &::before {
                         position: absolute;
                         content: '';
@@ -137,11 +155,12 @@
             #proceed {
                 background-color: $primary-blue-bright;
                 color: #fff;
-                border-radius: 15px;
+                border-radius: 10px;
                 box-shadow: 0 5px 20px $neutral-desaturated-blue;
                 padding: 1em ;
                 font-weight: 600;
                 position: relative;
+                letter-spacing: .1em;
 
                 &::before,
                 &::after {
@@ -151,7 +170,7 @@
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    border-radius: 15px;
+                    border-radius: 10px;
                     transition: .2s ease;
                 }
                 &::before {
@@ -179,11 +198,31 @@
                 font-weight: 600;
                 border: none;
                 outline: none;
+                width:auto;
+                padding: .2em 1em;
+                margin: .3em auto;
                 color: $neutral-desaturated-blue;
                 background-color: #fff;
+                position: relative;
 
+                &:before {
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    transition: .3s;
+                    border-radius: 10px;
+                    box-shadow: inset 2px 2px 4px #333a,
+                                inset -2px -2px 4px #ddd;
+                }
                 &:hover {
                     color: $neutral-dark-blue;
+                    &::before {
+                        opacity: 1;
+                    }
                 }
             }
         }
