@@ -233,6 +233,9 @@
                         opacity: 1;
                     }
                 }
+                &:active {
+                    transform: scale(.95);
+                }
             }
         }
     }

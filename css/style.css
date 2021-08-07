@@ -177,3 +177,5 @@
           color: #1f2f56; }
           .container .card .payment #cancel:hover::before {
             opacity: 1; }
+        .container .card .payment #cancel:active {
+          transform: scale(0.95); }
