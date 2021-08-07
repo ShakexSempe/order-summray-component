@@ -22,7 +22,7 @@
     background-color: #fff;
     border: 1px none;
     overflow: hidden;
-    box-shadow: 0 15px 20px #7280a7, inset 5px 5px 5px #ddd, inset -5px -5px 5px #333a; }
+    box-shadow: 0 10px 15px #7280a7, inset 5px 5px 3px #ddd, inset -5px -5px 3px #333a; }
     @media (min-width: 1440px) {
       .container .card {
         width: 400px; } }
@@ -33,7 +33,8 @@
       text-align: center; }
       .container .card .summary h2 {
         margin-bottom: .5em;
-        color: #1f2f56; }
+        color: #1f2f56;
+        font-weight: 900; }
       .container .card .summary p {
         color: #7280a7; }
     .container .card .plan {
@@ -98,6 +99,7 @@
           opacity: 0;
           box-shadow: inset 2px 2px 4px #000a, inset -2px -2px 4px #ddda; }
         .container .card .payment #proceed:hover {
+          box-shadow: none;
           background-color: #7280a7; }
           .container .card .payment #proceed:hover::before {
             opacity: 0; }

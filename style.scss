@@ -29,9 +29,9 @@
         background-color: #fff;
         border: 1px none;
         overflow: hidden;
-        box-shadow: 0 15px 20px $neutral-desaturated-blue,
-                    inset 5px 5px 5px #ddd,
-                    inset -5px -5px 5px #333a;
+        box-shadow: 0 10px 15px $neutral-desaturated-blue,
+                    inset 5px 5px 3px #ddd,
+                    inset -5px -5px 3px #333a;
 
         .hero {
             img {
@@ -45,6 +45,7 @@
             h2 {
                 margin-bottom: .5em;
                 color: $neutral-dark-blue;
+                font-weight: 900;
             }
 
             p {
@@ -139,6 +140,7 @@
                                 inset -2px -2px 4px #ddda;
                 }
                 &:hover {
+                    box-shadow: none;
                     &::before {opacity: 0;}
                     &::after {opacity: 1;}
                     background-color: $neutral-desaturated-blue;
