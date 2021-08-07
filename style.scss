@@ -36,6 +36,7 @@
 
         .hero {
             position: relative;
+            overflow: hidden;
             &::after {
                 position: absolute;
                 content: '';
@@ -51,6 +52,14 @@
             }
             img {
                 width: 100%;
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+                transform: scale(1.05);
+            }
+            &:hover {
+                img {
+                    transition: .5s;
+                }
             }
         }
         .summary {

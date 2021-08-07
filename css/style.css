@@ -29,7 +29,8 @@
       .container .card {
         width: 400px; } }
     .container .card .hero {
-      position: relative; }
+      position: relative;
+      overflow: hidden; }
       .container .card .hero::after {
         position: absolute;
         content: '';
@@ -42,7 +43,12 @@
         z-index: 0;
         box-shadow: inset 5px 5px 3px rgba(255, 255, 255, 0.363), inset -5px 0px 3px rgba(51, 51, 51, 0.445); }
       .container .card .hero img {
-        width: 100%; }
+        width: 100%;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        transform: scale(1.05); }
+      .container .card .hero:hover img {
+        transition: .5s; }
     .container .card .summary {
       padding: 1.6em;
       text-align: center; }
