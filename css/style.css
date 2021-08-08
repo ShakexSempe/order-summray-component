@@ -30,7 +30,8 @@
         width: 400px; } }
     .container .card .hero {
       position: relative;
-      overflow: hidden; }
+      overflow: hidden;
+      background-color: #3829e0; }
       .container .card .hero::after {
         position: absolute;
         content: '';
@@ -46,7 +47,12 @@
         width: 100%;
         border-top-right-radius: 15px;
         border-top-left-radius: 15px;
-        transform: scale(1.05); }
+        animation: hero-ani 5s ease-in-out infinite alternate; }
+
+@keyframes hero-ani {
+  100% {
+    transform: scale(1.04);
+    transform-origin: left; } }
       .container .card .hero:hover img {
         transition: .5s; }
     .container .card .card-bottom {
