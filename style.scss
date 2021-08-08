@@ -26,13 +26,11 @@
             width: 400px;
         }
 
-
-
         border-radius: 15px;
         background-color: #fff;
         border: 1px none;
         overflow: hidden;
-        box-shadow: 0 20px 10px rgba(5, 94, 129, 0.219),
+        box-shadow: 0 20px 10px rgba(5, 94, 129, 0.109),
                     inset 5px 5px 3px #ddd,
                     inset -5px -5px 3px rgba(51, 51, 51, 0.61);
 
@@ -155,12 +153,11 @@
 
                 a {
                     color: $text-light;
-                    background-color: $primary-blue-bright;
-                    padding: .2em .5em;
+                    padding: .3em .6em;
                     border-radius: 10px;
+                    color: $primary-blue-bright;
                     font-weight: 600;
                     font-size: .9em;
-                    text-decoration: none;
                     display: block;
                     position: relative;
                     transition: .2s;
@@ -171,15 +168,33 @@
                         left: 0;
                         width: 100%;
                         height: 100%;
+                        opacity: .6;
                         border-radius: 10px;
                         box-shadow: inset 2px 2px 3px #ddda,
-                                    inset -2px -2px 3px #000a;
+                                    inset -2px -2px 3px #333a;
+                    }
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        border-radius: 10px;
+                        box-shadow: inset 2px 2px 3px #333a,
+                                    inset -2px -2px 3px #ddda;
                     }
                     &:hover {
+                    text-decoration: none;
+                        transform: scale(.97);
                         background-color: $neutral-pale-blue;
                         color: $neutral-desaturated-blue;
+                        &::before {opacity: 0;}
+                        &::after {opacity: .3;}
                     }
                     &:active {
+                        &::after{opacity: 1;}
                         transition: .2s;
                         transform: scale(.9);
                     }
@@ -204,7 +219,6 @@
                 background-color: $primary-blue-bright;
                 color: #fff;
                 border-radius: 10px;
-                box-shadow: 0 5px 20px $neutral-desaturated-blue;
                 padding: 1em ;
                 font-weight: 600;
                 position: relative;
@@ -222,15 +236,18 @@
                     transition: .2s ease;
                 }
                 &::before {
-                    box-shadow: inset 2px 2px 4px #fffa,
+                    box-shadow: 0 15px 10px #3829e049,
+                                inset 2px 2px 4px #fffa,
                                 inset -2px -2px 4px #000a;
                 }
                 &::after {
                     opacity: 0;
-                    box-shadow: inset 2px 2px 4px #000a,
+                    box-shadow: 0 10px 10px #3829e049,
+                                inset 2px 2px 4px #000a,
                                 inset -2px -2px 4px #ddda;
                 }
                 &:hover {
+                    transform: scale(.99);
                     box-shadow: none;
                     &::before {opacity: 0;}
                     &::after {opacity: 1;}
@@ -238,7 +255,7 @@
                 }
                 &:active {
                     transition: .2s;
-                    transform: scale(.9);
+                    transform: scale(.95);
                 }
 
             }
@@ -249,6 +266,7 @@
                 width:auto;
                 padding: .2em 1em;
                 margin: .3em auto;
+                border-radius: 10px;
                 color: $neutral-desaturated-blue;
                 background-color: #fff;
                 position: relative;
@@ -260,25 +278,23 @@
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    opacity: 0;
+                    opacity: .3;
                     transition: .3s;
                     border-radius: 10px;
-                    box-shadow: inset 2px 2px 4px #333a,
+                    box-shadow: inset 2px 2px 4px #000a,
                                 inset -2px -2px 4px #ddd;
                 }
                 &:hover {
+                    transform: scale(.95);
                     color: $neutral-dark-blue;
                     &::before {
                         opacity: 1;
                     }
                 }
                 &:active {
-                    transform: scale(.95);
+                    transform: scale(.9);
                 }
             }
         }
     }
-    
-    
-    overflow: hidden;
 }

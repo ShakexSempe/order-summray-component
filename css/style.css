@@ -14,8 +14,7 @@
   background-position-y: -40%;
   background-attachment: fixed;
   display: grid;
-  place-items: center;
-  overflow: hidden; }
+  place-items: center; }
   @media (max-width: 768px) {
     .container {
       background-image: none;
@@ -26,7 +25,7 @@
     background-color: #fff;
     border: 1px none;
     overflow: hidden;
-    box-shadow: 0 20px 10px rgba(5, 94, 129, 0.219), inset 5px 5px 3px #ddd, inset -5px -5px 3px rgba(51, 51, 51, 0.61); }
+    box-shadow: 0 20px 10px rgba(5, 94, 129, 0.109), inset 5px 5px 3px #ddd, inset -5px -5px 3px rgba(51, 51, 51, 0.61); }
     @media (min-width: 1440px) {
       .container .card {
         width: 400px; } }
@@ -117,12 +116,11 @@
             font-size: .8em; } }
         .container .card .plan .change a {
           color: #fff;
-          background-color: #3829e0;
-          padding: .2em .5em;
+          padding: .3em .6em;
           border-radius: 10px;
+          color: #3829e0;
           font-weight: 600;
           font-size: .9em;
-          text-decoration: none;
           display: block;
           position: relative;
           transition: .2s; }
@@ -133,14 +131,33 @@
             left: 0;
             width: 100%;
             height: 100%;
+            opacity: .6;
             border-radius: 10px;
-            box-shadow: inset 2px 2px 3px #ddda, inset -2px -2px 3px #000a; }
+            box-shadow: inset 2px 2px 3px #ddda, inset -2px -2px 3px #333a; }
+          .container .card .plan .change a::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            border-radius: 10px;
+            box-shadow: inset 2px 2px 3px #333a, inset -2px -2px 3px #ddda; }
           .container .card .plan .change a:hover {
+            text-decoration: none;
+            transform: scale(0.97);
             background-color: #f5f7ff;
             color: #7280a7; }
+            .container .card .plan .change a:hover::before {
+              opacity: 0; }
+            .container .card .plan .change a:hover::after {
+              opacity: .3; }
           .container .card .plan .change a:active {
             transition: .2s;
             transform: scale(0.9); }
+            .container .card .plan .change a:active::after {
+              opacity: 1; }
     .container .card .payment {
       margin: 1em auto;
       display: grid;
@@ -154,7 +171,6 @@
         background-color: #3829e0;
         color: #fff;
         border-radius: 10px;
-        box-shadow: 0 5px 20px #7280a7;
         padding: 1em;
         font-weight: 600;
         position: relative;
@@ -169,11 +185,12 @@
           border-radius: 10px;
           transition: .2s ease; }
         .container .card .payment #proceed::before {
-          box-shadow: inset 2px 2px 4px #fffa, inset -2px -2px 4px #000a; }
+          box-shadow: 0 15px 10px #3829e049, inset 2px 2px 4px #fffa, inset -2px -2px 4px #000a; }
         .container .card .payment #proceed::after {
           opacity: 0;
-          box-shadow: inset 2px 2px 4px #000a, inset -2px -2px 4px #ddda; }
+          box-shadow: 0 10px 10px #3829e049, inset 2px 2px 4px #000a, inset -2px -2px 4px #ddda; }
         .container .card .payment #proceed:hover {
+          transform: scale(0.99);
           box-shadow: none;
           background-color: #7280a7; }
           .container .card .payment #proceed:hover::before {
@@ -182,7 +199,7 @@
             opacity: 1; }
         .container .card .payment #proceed:active {
           transition: .2s;
-          transform: scale(0.9); }
+          transform: scale(0.95); }
       .container .card .payment #cancel {
         font-weight: 600;
         border: none;
@@ -190,6 +207,7 @@
         width: auto;
         padding: .2em 1em;
         margin: .3em auto;
+        border-radius: 10px;
         color: #7280a7;
         background-color: #fff;
         position: relative; }
@@ -200,13 +218,14 @@
           left: 0;
           width: 100%;
           height: 100%;
-          opacity: 0;
+          opacity: .3;
           transition: .3s;
           border-radius: 10px;
-          box-shadow: inset 2px 2px 4px #333a, inset -2px -2px 4px #ddd; }
+          box-shadow: inset 2px 2px 4px #000a, inset -2px -2px 4px #ddd; }
         .container .card .payment #cancel:hover {
+          transform: scale(0.95);
           color: #1f2f56; }
           .container .card .payment #cancel:hover::before {
             opacity: 1; }
         .container .card .payment #cancel:active {
-          transform: scale(0.95); }
+          transform: scale(0.9); }
