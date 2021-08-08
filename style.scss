@@ -56,11 +56,11 @@
                 border-top-right-radius: 15px;
                 border-top-left-radius: 15px;
                 // transform: scale(1);
-                animation: hero-ani 5s ease-in-out infinite alternate;
+                animation: hero-ani 10s ease-in-out infinite alternate;
 
                 @keyframes hero-ani {
                     100% {
-                        transform: scale(1.04);
+                        transform: scale(1.1);
                         transform-origin: left;
                     }
                 }
