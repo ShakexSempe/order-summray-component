@@ -19,7 +19,7 @@
       background-image: none;
       background-color: #e0e8ff; } }
   .container .card {
-    width: 300px;
+    width: 310px;
     border-radius: 15px;
     background-color: #fff;
     border: 1px none;
@@ -49,31 +49,51 @@
         transform: scale(1.05); }
       .container .card .hero:hover img {
         transition: .5s; }
+    .container .card .card-bottom {
+      padding: 1.5em; }
+      @media (max-width: 768px) {
+        .container .card .card-bottom {
+          margin: .5em auto; } }
     .container .card .summary {
-      padding: 1.6em;
+      margin: 1em auto;
       text-align: center; }
+      @media (max-width: 768px) {
+        .container .card .summary {
+          margin: 0 auto 1.5em auto; } }
       .container .card .summary h2 {
         margin-bottom: .5em;
         color: #1f2f56;
         font-weight: 900; }
+        @media (max-width: 768px) {
+          .container .card .summary h2 {
+            font-size: 1.4em;
+            margin-bottom: 1em; } }
       .container .card .summary p {
         color: #7280a7; }
     .container .card .plan {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: .5em auto;
-      width: 90%;
+      margin: 0 auto;
+      width: 100%;
       border-radius: 10px;
       border: none;
       background-color: #f5f7ff;
-      padding: 1em .5em;
+      padding: 1em;
       box-shadow: inset 3px 3px 4px rgba(221, 221, 221, 0.349), inset -3px -3px 4px rgba(0, 0, 0, 0.26); }
+      @media (max-width: 768px) {
+        .container .card .plan {
+          padding: 1em; } }
       .container .card .plan .price-plan {
         flex-basis: 60%;
         display: flex;
-        gap: 1em;
-        border: none; }
+        align-items: center;
+        gap: .5em; }
+        @media (max-width: 768px) {
+          .container .card .plan .price-plan {
+            flex-basis: 70%;
+            justify-content: space-evenly;
+            gap: 0; } }
         .container .card .plan .price-plan .price p {
           font-size: .9em;
           font-weight: 900;
@@ -84,6 +104,9 @@
             font-weight: 500; }
       .container .card .plan .change {
         align-content: flex-end; }
+        @media (max-width: 768px) {
+          .container .card .plan .change {
+            font-size: .8em; } }
         .container .card .plan .change a {
           color: #fff;
           background-color: #3829e0;
@@ -111,7 +134,7 @@
             transition: .2s;
             transform: scale(0.9); }
     .container .card .payment {
-      margin: 1em;
+      margin: 1em auto;
       display: grid;
       gap: 1em; }
       .container .card .payment button {
