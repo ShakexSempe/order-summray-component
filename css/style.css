@@ -78,6 +78,9 @@
       .container .card .summary p {
         color: #7280a7;
         font-size: 1em; }
+        @media (max-width: 768px) {
+          .container .card .summary p {
+            font-size: .95em; } }
     .container .card .plan {
       display: flex;
       justify-content: space-between;
