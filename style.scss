@@ -92,13 +92,14 @@
                 color: $neutral-dark-blue;
                 font-weight: 900;
                 @media (max-width: 768px ){
-                font-size: 1.4em;
-                margin-bottom: 1em;
+                    font-size: 1.4em;
+                    margin-bottom: 1em;
                 }
             }
-
+            
             p {
                 color: $neutral-desaturated-blue;
+                font-size: .9.4em;
                 
             }
         }

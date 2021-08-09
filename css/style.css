@@ -76,7 +76,8 @@
             font-size: 1.4em;
             margin-bottom: 1em; } }
       .container .card .summary p {
-        color: #7280a7; }
+        color: #7280a7;
+        font-size: 0.9 0.4em; }
     .container .card .plan {
       display: flex;
       justify-content: space-between;
