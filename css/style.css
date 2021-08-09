@@ -91,7 +91,7 @@
       box-shadow: inset 3px 3px 4px rgba(221, 221, 221, 0.349), inset -3px -3px 4px rgba(0, 0, 0, 0.26); }
       @media (max-width: 768px) {
         .container .card .plan {
-          padding: 1em; } }
+          padding: 1em .5em; } }
       .container .card .plan .price-plan {
         flex-basis: 60%;
         display: flex;
@@ -100,8 +100,9 @@
         @media (max-width: 768px) {
           .container .card .plan .price-plan {
             flex-basis: 70%;
-            justify-content: space-evenly;
-            gap: 0; } }
+            justify-content: flex-start;
+            padding: .3em;
+            gap: 1em; } }
         .container .card .plan .price-plan .price p {
           font-size: .8em;
           font-weight: 900;
