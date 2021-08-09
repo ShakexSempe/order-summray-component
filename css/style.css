@@ -103,7 +103,7 @@
             justify-content: space-evenly;
             gap: 0; } }
         .container .card .plan .price-plan .price p {
-          font-size: .9em;
+          font-size: .8em;
           font-weight: 900;
           margin-bottom: .2em;
           color: #1f2f56; }
@@ -114,7 +114,7 @@
         align-content: flex-end; }
         @media (max-width: 768px) {
           .container .card .plan .change {
-            font-size: .8em; } }
+            font-size: .7em; } }
         .container .card .plan .change a {
           color: #fff;
           padding: .3em .6em;
