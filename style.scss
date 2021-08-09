@@ -80,7 +80,6 @@
             }
         }
         .summary {
-            // padding: 1.6em;
             margin: 1em auto;
             text-align: center;
             @media (max-width: 768px ){
@@ -136,7 +135,7 @@
                 }
                 .price {
                     p {
-                        font-size: .8em;
+                        font-size: .9em;
                         font-weight: 900;
                         margin-bottom: .2em;
                         color: $neutral-dark-blue;
