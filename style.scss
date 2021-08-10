@@ -11,7 +11,9 @@
     background-image: url(../images/pattern-background-desktop.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    // background-position-y: -40%;
+    background-color: $primary-blue-pale;
+    // background-position: top;
+    background-position-y: -10%;
     background-attachment: fixed;
     font-size: 16px;
     @media (max-width: 768px ){
@@ -153,7 +155,7 @@
             .change {
                 align-content: flex-end;
                 @media (max-width: 768px ){
-                    font-size: .7em;
+                    font-size: .9em;
                     }
 
                 a {
@@ -223,6 +225,7 @@
             #proceed {
                 background-color: $primary-blue-bright;
                 color: #fff;
+                text-shadow: 1px 0px 2px #000;
                 border-radius: 10px;
                 padding: 1em ;
                 font-weight: 600;
@@ -241,13 +244,13 @@
                     transition: .2s ease;
                 }
                 &::before {
-                    box-shadow: 0 15px 10px #3829e049,
+                    box-shadow: 0 15px 10px #2c29e02f,
                                 inset 2px 2px 4px #fffa,
                                 inset -2px -2px 4px #000a;
                 }
                 &::after {
                     opacity: 0;
-                    box-shadow: 0 10px 10px #3829e049,
+                    box-shadow: 0 10px 10px #2c29e02f,
                                 inset 2px 2px 4px #000a,
                                 inset -2px -2px 4px #ddda;
                 }
