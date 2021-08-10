@@ -10,13 +10,19 @@
   min-height: 100vh;
   background-image: url(../images/pattern-background-desktop.svg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 110%;
   background-color: #e0e8ff;
   background-position-y: -10%;
+  background-position-x: 100%;
   background-attachment: fixed;
   font-size: 16px;
+  animation: backImg 5s infinite alternate;
   display: grid;
   place-items: center; }
+
+@keyframes backImg {
+  100% {
+    background-position-x: 10%; } }
   @media (max-width: 768px) {
     .container {
       background-image: none;
@@ -50,11 +56,11 @@
         width: 100%;
         border-top-right-radius: 15px;
         border-top-left-radius: 15px;
-        animation: hero-ani 10s ease-in-out infinite alternate; }
+        animation: hero-ani 3s ease-in-out infinite alternate; }
 
 @keyframes hero-ani {
   100% {
-    transform: scale(1.1);
+    transform: scale(1.02);
     transform-origin: left; } }
       .container .card .hero:hover img {
         transition: .5s; }
