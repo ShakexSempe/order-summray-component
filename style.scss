@@ -132,7 +132,7 @@
             box-shadow: inset 3px 3px 4px rgba(221, 221, 221, 0.349),
                         inset -3px -3px 4px rgba(0, 0, 0, 0.26);
             .price-plan {
-                flex-basis: 60%;
+                flex-basis: 65%;
                 display: flex;
                 align-items: center;
                 gap: .5em;
@@ -167,7 +167,7 @@
 
                 a {
                     color: $text-light;
-                    padding: .3em 1em;
+                    padding: .3em .8em;
                     border-radius: 10px;
                     color: $primary-blue-bright;
                     font-weight: 600;

@@ -100,7 +100,7 @@
         .container .card .plan {
           padding: 1em .5em; } }
       .container .card .plan .price-plan {
-        flex-basis: 60%;
+        flex-basis: 65%;
         display: flex;
         align-items: center;
         gap: .5em; }
@@ -124,7 +124,7 @@
             font-size: .9em; } }
         .container .card .plan .change a {
           color: #fff;
-          padding: .3em 1em;
+          padding: .3em .8em;
           border-radius: 10px;
           color: #3829e0;
           font-weight: 600;
