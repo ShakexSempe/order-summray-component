@@ -12,7 +12,7 @@
   background-repeat: no-repeat;
   background-size: 110%;
   background-color: #e0e8ff;
-  background-position-y: -10%;
+  background-position-y: -20%;
   background-position-x: 100%;
   background-attachment: fixed;
   font-size: 16px;
@@ -81,16 +81,15 @@
         font-weight: 900; }
         @media (max-width: 768px) {
           .container .card .summary h2 {
-            font-size: 1.4em;
+            font-size: 1.5em;
             margin-bottom: 1em; } }
       .container .card .summary p {
-        color: #7280a7;
-        font-size: 1em; }
+        color: #7280a7; }
     .container .card .plan {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 0 auto;
+      margin: 1em auto;
       width: 100%;
       border-radius: 10px;
       border: none;
@@ -112,7 +111,6 @@
             padding: .3em;
             gap: 1em; } }
         .container .card .plan .price-plan .price p {
-          font-size: .9em;
           font-weight: 900;
           margin-bottom: .2em;
           color: #1f2f56; }
@@ -126,7 +124,7 @@
             font-size: .9em; } }
         .container .card .plan .change a {
           color: #fff;
-          padding: .3em .6em;
+          padding: .3em 1em;
           border-radius: 10px;
           color: #3829e0;
           font-weight: 600;
@@ -168,16 +166,16 @@
             transform: scale(0.9); }
             .container .card .plan .change a:active::after {
               opacity: 1; }
-    .container .card .payment {
+    .container .card .order {
       margin: 1em auto;
       display: grid;
       gap: 1em; }
-      .container .card .payment button {
+      .container .card .order button {
         cursor: pointer;
         transition: .2s;
         border: none;
         outline: none; }
-      .container .card .payment #proceed {
+      .container .card .order #proceed {
         background-color: #3829e0;
         color: #fff;
         text-shadow: 1px 0px 2px #000;
@@ -186,7 +184,7 @@
         font-weight: 600;
         position: relative;
         letter-spacing: .1em; }
-        .container .card .payment #proceed::before, .container .card .payment #proceed::after {
+        .container .card .order #proceed::before, .container .card .order #proceed::after {
           position: absolute;
           content: '';
           top: 0;
@@ -195,23 +193,23 @@
           height: 100%;
           border-radius: 10px;
           transition: .2s ease; }
-        .container .card .payment #proceed::before {
+        .container .card .order #proceed::before {
           box-shadow: 0 15px 10px #2c29e02f, inset 2px 2px 4px #fffa, inset -2px -2px 4px #000a; }
-        .container .card .payment #proceed::after {
+        .container .card .order #proceed::after {
           opacity: 0;
           box-shadow: 0 10px 10px #2c29e02f, inset 2px 2px 4px #000a, inset -2px -2px 4px #ddda; }
-        .container .card .payment #proceed:hover {
+        .container .card .order #proceed:hover {
           transform: scale(0.99);
           box-shadow: none;
           background-color: #7280a7; }
-          .container .card .payment #proceed:hover::before {
+          .container .card .order #proceed:hover::before {
             opacity: 0; }
-          .container .card .payment #proceed:hover::after {
+          .container .card .order #proceed:hover::after {
             opacity: 1; }
-        .container .card .payment #proceed:active {
+        .container .card .order #proceed:active {
           transition: .2s;
           transform: scale(0.95); }
-      .container .card .payment #cancel {
+      .container .card .order #cancel {
         font-weight: 600;
         border: none;
         outline: none;
@@ -222,7 +220,7 @@
         color: #7280a7;
         background-color: #fff;
         position: relative; }
-        .container .card .payment #cancel:before {
+        .container .card .order #cancel:before {
           position: absolute;
           content: '';
           top: 0;
@@ -233,10 +231,10 @@
           transition: .3s;
           border-radius: 10px;
           box-shadow: inset 2px 2px 4px #000a, inset -2px -2px 4px #ddd; }
-        .container .card .payment #cancel:hover {
+        .container .card .order #cancel:hover {
           transform: scale(0.95);
           color: #1f2f56; }
-          .container .card .payment #cancel:hover::before {
+          .container .card .order #cancel:hover::before {
             opacity: 1; }
-        .container .card .payment #cancel:active {
+        .container .card .order #cancel:active {
           transform: scale(0.9); }
