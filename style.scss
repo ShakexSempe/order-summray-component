@@ -61,6 +61,7 @@
                 box-shadow: inset 5px 5px 3px rgba(255, 255, 255, 0.363),
                             inset -5px 0px 3px rgba(51, 51, 51, 0.445);
             }
+            // hero image with animation
             img {
                 width: 100%;
                 border-top-right-radius: 15px;
@@ -80,6 +81,7 @@
                     transition: .5s;
                 }
             }
+            // end of hero image with animation
         }
         // end of hero image
 
@@ -96,7 +98,6 @@
             text-align: center;
             @media (max-width: 768px ){
                 margin: 0 auto 1.5em auto;
-                
             }
 
             h2 {
@@ -117,6 +118,9 @@
         
         // payment plan section
         .plan {
+            @media (max-width: 768px ){
+                padding: 1em .5em;
+                }
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -126,12 +130,10 @@
             border: none;
             background-color: $neutral-pale-blue;
             padding: 1em;
-            @media (max-width: 768px ){
-                padding: 1em .5em;
-                }
             box-shadow: inset 3px 3px 4px rgba(221, 221, 221, 0.349),
                         inset -3px -3px 4px rgba(0, 0, 0, 0.26);
-            .price-plan {
+            // Price summary
+                        .price-plan {
                 flex-basis: 65%;
                 display: flex;
                 align-items: center;
@@ -157,7 +159,7 @@
                 }
                
             }
-            
+            // end of Price summary
             // change order button
             .change {
                 align-content: flex-end;
