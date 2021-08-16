@@ -56,4 +56,3 @@ I would like to improve my css positioning. I'm also keen on learning about when
 
 - Website - [Boitumelo Sempe](http://shakexsempe.netlify.app/)
 - Frontend Mentor - [@ShakexSempe](https://www.frontendmentor.io/profile/ShakexSempe)
-- Twitter - [@Shake_x11](https://twitter.com/Shake_x11)
