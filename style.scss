@@ -40,9 +40,7 @@
         width: 330px;
         @media (min-width: 1024px){
             width: 450px;
-        }
-        @media (min-width: 1500px){
-            height: 95vh;
+            height: auto;
         }
 
         border-radius: 15px;
@@ -115,7 +113,7 @@
                 margin: 0 auto;
             }
 
-            h2 {
+            h1 {
                 margin-bottom: .5em;
                 color: $neutral-dark-blue;
                 font-weight: 900;
