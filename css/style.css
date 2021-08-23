@@ -117,9 +117,12 @@
             justify-content: flex-start;
             padding: .3em;
             gap: 1em; } }
+        .container .card .plan .price-plan .price h3 {
+          color: #1f2f56;
+          font-size: 1em; }
         .container .card .plan .price-plan .price p, .container .card .plan .price-plan .price h3 {
           font-weight: 900;
-          margin-bottom: .2em;
+          margin-bottom: .3em;
           color: #1f2f56; }
           .container .card .plan .price-plan .price p span, .container .card .plan .price-plan .price h3 span {
             color: #7280a7;
