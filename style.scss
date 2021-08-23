@@ -123,7 +123,7 @@
                     padding: .5em;
                 }
             }
-            
+
             p {
                 color: $neutral-desaturated-blue;
                 margin: 1em;
@@ -165,7 +165,7 @@
 
                 }
                 .price {
-                    p {
+                    p, h3 {
                         font-weight: 900;
                         margin-bottom: .2em;
                         color: $neutral-dark-blue;
@@ -176,7 +176,7 @@
                         }
                     }
                 }
-               
+            
             }
             // end of Price summary
             // change order button
