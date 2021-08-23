@@ -38,7 +38,7 @@
     // order card
     .card {
         width: 330px;
-        @media (min-width: 1440px){
+        @media (min-width: 1024px){
             width: 450px;
         }
         @media (min-width: 1500px){
