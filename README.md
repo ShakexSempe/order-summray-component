@@ -47,7 +47,7 @@ I learned the importance of a good color theme and font weights in display infor
 
 ### Continued development
 
-I would like to improve my css positioning. I'm also keen on learning about when best to use javascript and when is css alone adequate for a particular problem.
+I would like to learn more about svgs.
 
 ## Author
 
