@@ -5,7 +5,7 @@
     box-sizing: border-box;
     font-family: 'Red Hat Display', sans-serif;
 }
-// container as background
+// container (background)
 .container {
     width: 100%;
     min-height: 100vh;
@@ -17,18 +17,24 @@
     background-position-x: 100%;
     background-attachment: fixed;
     font-size: 16px;
+    display: grid;
+    place-items: center;
     animation: backImg 5s infinite alternate;
+    // background animation on desktop
     @keyframes backImg {
         100% {
             background-position-x: 10%;
         }
     }
+    // end of background animation on desktop
+    // background on screens < 768px
     @media (max-width: 768px ){
         background-image: none;
         background-color: $primary-blue-pale;
     }
-    display: grid;
-    place-items: center;
+    // end of background on screens < 768px
+
+    
     // order card
     .card {
         width: 320px;
@@ -48,6 +54,7 @@
             position: relative;
             overflow: hidden;
             background-color: $primary-blue-bright;
+            // hero image box shadow
             &::after {
                 position: absolute;
                 content: '';
@@ -61,6 +68,7 @@
                 box-shadow: inset 5px 5px 3px rgba(255, 255, 255, 0.363),
                             inset -5px 0px 3px rgba(51, 51, 51, 0.445);
             }
+            // end of hero image box shadow
             // hero image with animation
             img {
                 width: 100%;
@@ -68,13 +76,15 @@
                 border-top-left-radius: 15px;
                 // transform: scale(1);
                 animation: hero-ani 3s ease-in-out infinite alternate;
-
+                // image animation
                 @keyframes hero-ani {
                     100% {
                         transform: scale(1.02);
                         transform-origin: left;
                     }
                 }
+                // end of image animation
+
             }
             &:hover {
                 img {
@@ -84,14 +94,15 @@
             // end of hero image with animation
         }
         // end of hero image
-
+        // card body & content
         .card-bottom {
             padding: 1.5em;
             @media (max-width: 768px ){
-                // padding: .5em;
                 margin: .5em auto;
             }
         }
+        // end of card body & content
+
         // order summary h2 and p
         .summary {
             margin: 1em auto;
@@ -327,4 +338,4 @@
     // end of order card
 
 }
-// end of container as background
+// end of container (background)
