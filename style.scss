@@ -40,7 +40,9 @@
         width: 330px;
         @media (min-width: 1440px){
             width: 450px;
-            // height: 85vh;
+        }
+        @media (min-width: 1500px){
+            height: 95vh;
         }
 
         border-radius: 15px;
