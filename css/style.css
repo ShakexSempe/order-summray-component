@@ -33,6 +33,7 @@
 }
 .container .card {
   width: 330px;
+  box-shadow: 0 1rem 1rem rgba(114, 128, 167, 0.2);
   border-radius: 15px;
   background-color: #fff;
   border: 1px none;

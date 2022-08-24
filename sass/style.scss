@@ -1,0 +1,314 @@
+@import 'variables';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+// container (background)
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-color: $primary-blue-pale;
+    background-position-y: -20%;
+    background-position-x: 100%;
+    // background-attachment: fixed;
+    font-size: 16px;
+    display: grid;
+    place-items: center;
+    animation: backImg 5s infinite alternate;
+    // background animation on desktop
+    @keyframes backImg {
+        100% {
+            background-position-x: 10%;
+        }
+    }
+    // end of background animation on desktop
+    // background on screens < 768px
+    @media (max-width: 768px ){
+        background-image: none;
+        background-color: $primary-blue-pale;
+    }
+    // end of background on screens < 768px
+
+    
+    // order card
+    .card {
+        width: 330px;
+        // height: 90vh;
+        box-shadow: 0 1rem 1rem hsla(224, 23%, 55%, .2);
+        @media (min-width: 1024px){
+            width: 450px;
+            // height: 800px;
+        }
+
+        border-radius: 15px;
+        background-color: #fff;
+        border: 1px none;
+        overflow: hidden;
+        // hero image
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background-color: $primary-blue-bright;
+            // hero image box shadow
+            &::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+                z-index: 0;
+                box-shadow: inset 5px 5px 3px rgba(255, 255, 255, 0.15),
+                            inset -5px 0px 3px rgba(51, 51, 51, 0.2);
+            }
+            // end of hero image box shadow
+            // hero image with animation
+            img {
+                width: 100%;
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+                // transform: scale(1);
+                animation: hero-ani 3s ease-in-out infinite alternate;
+                // image animation
+                @keyframes hero-ani {
+                    100% {
+                        transform: scale(1.02);
+                        transform-origin: left;
+                    }
+                }
+                // end of image animation
+
+            }
+            &:hover {
+                img {
+                    transition: .5s;
+                }
+            }
+            // end of hero image with animation
+        }
+        // end of hero image
+        // card body & content
+        .card-bottom {
+            padding: 2em 2.5em;
+            @media (max-width: 768px ){
+                margin: .5em auto;
+                padding: 1em 1.5em;
+            }
+        }
+        // end of card body & content
+
+        // order summary h2 and p
+        .summary {
+            margin: .5em auto;
+            text-align: center;
+            @media (max-width: 768px ){
+                margin: 0 auto;
+            }
+
+            h1 {
+                margin-bottom: .5em;
+                color: $neutral-dark-blue;
+                font-weight: 900;
+                @media (max-width: 768px ){
+                    font-size: 1.5em;
+                    margin-bottom: 0;
+                    padding: .5em;
+                }
+            }
+
+            p {
+                color: $neutral-desaturated-blue;
+                margin: 1em;
+                font-weight: 500;
+                @media (max-width: 768px){
+                    margin: .5em;
+                }
+            }
+        }
+        // end of order summary h2 and p
+        
+        // payment plan section
+        .plan {
+            @media (max-width: 768px ){
+                padding: 1em;
+                }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2em auto;
+            width: 100%;
+            border-radius: 10px;
+            border: none;
+            background-color: $neutral-pale-blue;
+            padding: 1.5em;
+            // Price summary
+                        .price-plan {
+                flex-basis: 65%;
+                display: flex;
+                align-items: center;
+                gap: .5em;
+                @media (max-width: 768px ){
+                    flex-basis: 70%;
+                    justify-content: flex-start;
+                    padding: .3em;
+                    gap: 1em;
+
+                }
+                .price {
+                    h2 {
+                        color: $neutral-dark-blue;
+                        font-size: 1em;
+                    }
+                    p ,h2{
+                        font-weight: 900;
+                        margin-bottom: .3em;
+                        color: $neutral-dark-blue;
+
+                        span {
+                            color:$neutral-desaturated-blue;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            
+            }
+            // end of Price summary
+            // change order button
+            .change {
+                align-content: flex-end;
+                @media (max-width: 768px ){
+                    font-size: .9em;
+                    }
+
+                a {
+                    color: $text-light;
+                    padding: .3em .8em;
+                    border-radius: 10px;
+                    color: $primary-blue-bright;
+                    font-weight: 600;
+                    font-size: .9em;
+                    display: block;
+                    position: relative;
+                    transition: .2s;
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: .6;
+                        border-radius: 10px;
+                    }
+                    &:hover {
+                    text-decoration: none;
+                        transform: scale(.97);
+                        background-color: $neutral-pale-blue;
+                        color: $neutral-desaturated-blue;
+                        &::before {opacity: 0;}
+                        &::after {opacity: .3;}
+                    }
+                    &:active {
+                        &::after{opacity: 1;}
+                        transition: .2s;
+                        transform: scale(.9);
+                    }
+                }
+                
+            }
+            // end of change order button
+        }
+        // end of payment plan section
+        
+        // proceed and cancel buttons
+        .order {
+            margin: 1em auto;
+            display: grid;
+            gap: 1em;
+            // general button style
+            button {
+                cursor: pointer;
+                transition: .2s;
+                border: none;
+                outline: none;
+            }
+            // proceed button
+            #proceed {
+                background-color: $primary-blue-bright;
+                color: #fff;
+                text-shadow: 1px 0px 2px #000;
+                border-radius: 10px;
+                padding: 1em ;
+                font-weight: 600;
+                position: relative;
+                letter-spacing: .1em;
+                // proceed button box shadows
+                &::before,
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    transition: .2s ease;
+                }
+                &::before {
+                    box-shadow: 0 15px 10px #2c29e02f,
+                                inset 2px 2px 2px rgba(255, 255, 255, .2),
+                                inset -2px -2px 2px rgba(0, 0, 0, 0.26);
+                }
+                &::after {
+                    opacity: 0;
+                    box-shadow: 0 10px 10px #2c29e02f,
+                                inset 2px 2px 2px rgba(0, 0, 0, 0.26),
+                                inset -2px -2px 2px rgba(255, 255, 255, .2);
+                }
+                &:hover {
+                    transform: scale(.99);
+                    box-shadow: none;
+                    &::before {opacity: 0;}
+                    &::after {opacity: 1;}
+                    background-color: $neutral-desaturated-blue;
+                }
+                &:active {
+                    transition: .2s;
+                    transform: scale(.95);
+                }
+                // end of proceed button box shadows
+            }
+            // end of proceed button
+            // cancel order button
+            #cancel {
+                font-weight: 600;
+                border: none;
+                outline: none;
+                width:auto;
+                padding: .2em 1em;
+                margin: .3em auto;
+                border-radius: 10px;
+                color: $neutral-desaturated-blue;
+                background-color: #fff;
+                position: relative;
+                &:active {
+                    transform: scale(.9);
+                }
+            }
+            // end of cancel order button
+
+        }
+        // end of proceed and cancel buttons
+
+    }
+    // end of order card
+
+}
+// end of container (background)
