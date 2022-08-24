@@ -3,11 +3,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Red Hat Display', sans-serif; }
+  font-family: "Red Hat Display", sans-serif;
+}
 
 .container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(../images/pattern-background-desktop.svg);
   background-repeat: no-repeat;
   background-size: 110%;
@@ -17,234 +18,261 @@
   font-size: 16px;
   display: grid;
   place-items: center;
-  animation: backImg 5s infinite alternate; }
-
+  animation: backImg 5s infinite alternate;
+}
 @keyframes backImg {
   100% {
-    background-position-x: 10%; } }
-  @media (max-width: 768px) {
-    .container {
-      background-image: none;
-      background-color: #e0e8ff; } }
+    background-position-x: 10%;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    background-image: none;
+    background-color: #e0e8ff;
+  }
+}
+.container .card {
+  width: 330px;
+  border-radius: 15px;
+  background-color: #fff;
+  border: 1px none;
+  overflow: hidden;
+}
+@media (min-width: 1024px) {
   .container .card {
-    width: 330px;
-    border-radius: 15px;
-    background-color: #fff;
-    border: 1px none;
-    overflow: hidden;
-    box-shadow: 0 20px 10px rgba(5, 94, 129, 0.109), inset 5px 5px 3px #ddd, inset -5px -5px 3px rgba(31, 47, 86, 0.466); }
-    @media (min-width: 1024px) {
-      .container .card {
-        width: 450px;
-        height: auto; } }
-    .container .card .hero {
-      position: relative;
-      overflow: hidden;
-      background-color: #3829e0; }
-      .container .card .hero::after {
-        position: absolute;
-        content: '';
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-top-right-radius: 15px;
-        border-top-left-radius: 15px;
-        z-index: 0;
-        box-shadow: inset 5px 5px 3px rgba(255, 255, 255, 0.363), inset -5px 0px 3px rgba(51, 51, 51, 0.445); }
-      .container .card .hero img {
-        width: 100%;
-        border-top-right-radius: 15px;
-        border-top-left-radius: 15px;
-        animation: hero-ani 3s ease-in-out infinite alternate; }
-
+    width: 450px;
+  }
+}
+.container .card .hero {
+  position: relative;
+  overflow: hidden;
+  background-color: #3829e0;
+}
+.container .card .hero::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  z-index: 0;
+  box-shadow: inset 5px 5px 3px rgba(255, 255, 255, 0.15), inset -5px 0px 3px rgba(51, 51, 51, 0.2);
+}
+.container .card .hero img {
+  width: 100%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  animation: hero-ani 3s ease-in-out infinite alternate;
+}
 @keyframes hero-ani {
   100% {
     transform: scale(1.02);
-    transform-origin: left; } }
-      .container .card .hero:hover img {
-        transition: .5s; }
-    .container .card .card-bottom {
-      padding: 2em 2.5em; }
-      @media (max-width: 768px) {
-        .container .card .card-bottom {
-          margin: .5em auto;
-          padding: 1em 1.5em; } }
-    .container .card .summary {
-      margin: .5em auto;
-      text-align: center; }
-      @media (max-width: 768px) {
-        .container .card .summary {
-          margin: 0 auto; } }
-      .container .card .summary h1 {
-        margin-bottom: .5em;
-        color: #1f2f56;
-        font-weight: 900; }
-        @media (max-width: 768px) {
-          .container .card .summary h1 {
-            font-size: 1.5em;
-            margin-bottom: 0;
-            padding: .5em; } }
-      .container .card .summary p {
-        color: #7280a7;
-        margin: 1em;
-        font-weight: 500; }
-        @media (max-width: 768px) {
-          .container .card .summary p {
-            margin: .5em; } }
-    .container .card .plan {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 2em auto;
-      width: 100%;
-      border-radius: 10px;
-      border: none;
-      background-color: #f5f7ff;
-      padding: 1.5em;
-      box-shadow: inset 3px 3px 4px rgba(221, 221, 221, 0.349), inset -3px -3px 4px rgba(0, 0, 0, 0.26); }
-      @media (max-width: 768px) {
-        .container .card .plan {
-          padding: 1em; } }
-      .container .card .plan .price-plan {
-        flex-basis: 65%;
-        display: flex;
-        align-items: center;
-        gap: .5em; }
-        @media (max-width: 768px) {
-          .container .card .plan .price-plan {
-            flex-basis: 70%;
-            justify-content: flex-start;
-            padding: .3em;
-            gap: 1em; } }
-        .container .card .plan .price-plan .price h2 {
-          color: #1f2f56;
-          font-size: 1em; }
-        .container .card .plan .price-plan .price p, .container .card .plan .price-plan .price h2 {
-          font-weight: 900;
-          margin-bottom: .3em;
-          color: #1f2f56; }
-          .container .card .plan .price-plan .price p span, .container .card .plan .price-plan .price h2 span {
-            color: #7280a7;
-            font-weight: 500; }
-      .container .card .plan .change {
-        align-content: flex-end; }
-        @media (max-width: 768px) {
-          .container .card .plan .change {
-            font-size: .9em; } }
-        .container .card .plan .change a {
-          color: #fff;
-          padding: .3em .8em;
-          border-radius: 10px;
-          color: #3829e0;
-          font-weight: 600;
-          font-size: .9em;
-          display: block;
-          position: relative;
-          transition: .2s; }
-          .container .card .plan .change a::before {
-            position: absolute;
-            content: '';
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: .6;
-            border-radius: 10px;
-            box-shadow: inset 2px 2px 3px #ddda, inset -2px -2px 3px #333a; }
-          .container .card .plan .change a::after {
-            position: absolute;
-            content: '';
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            border-radius: 10px;
-            box-shadow: inset 2px 2px 3px #333a, inset -2px -2px 3px #ddda; }
-          .container .card .plan .change a:hover {
-            text-decoration: none;
-            transform: scale(0.97);
-            background-color: #f5f7ff;
-            color: #7280a7; }
-            .container .card .plan .change a:hover::before {
-              opacity: 0; }
-            .container .card .plan .change a:hover::after {
-              opacity: .3; }
-          .container .card .plan .change a:active {
-            transition: .2s;
-            transform: scale(0.9); }
-            .container .card .plan .change a:active::after {
-              opacity: 1; }
-    .container .card .order {
-      margin: 1em auto;
-      display: grid;
-      gap: 1em; }
-      .container .card .order button {
-        cursor: pointer;
-        transition: .2s;
-        border: none;
-        outline: none; }
-      .container .card .order #proceed {
-        background-color: #3829e0;
-        color: #fff;
-        text-shadow: 1px 0px 2px #000;
-        border-radius: 10px;
-        padding: 1em;
-        font-weight: 600;
-        position: relative;
-        letter-spacing: .1em; }
-        .container .card .order #proceed::before, .container .card .order #proceed::after {
-          position: absolute;
-          content: '';
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          border-radius: 10px;
-          transition: .2s ease; }
-        .container .card .order #proceed::before {
-          box-shadow: 0 15px 10px #2c29e02f, inset 2px 2px 4px #fffa, inset -2px -2px 4px #000a; }
-        .container .card .order #proceed::after {
-          opacity: 0;
-          box-shadow: 0 10px 10px #2c29e02f, inset 2px 2px 4px #000a, inset -2px -2px 4px #ddda; }
-        .container .card .order #proceed:hover {
-          transform: scale(0.99);
-          box-shadow: none;
-          background-color: #7280a7; }
-          .container .card .order #proceed:hover::before {
-            opacity: 0; }
-          .container .card .order #proceed:hover::after {
-            opacity: 1; }
-        .container .card .order #proceed:active {
-          transition: .2s;
-          transform: scale(0.95); }
-      .container .card .order #cancel {
-        font-weight: 600;
-        border: none;
-        outline: none;
-        width: auto;
-        padding: .2em 1em;
-        margin: .3em auto;
-        border-radius: 10px;
-        color: #7280a7;
-        background-color: #fff;
-        position: relative; }
-        .container .card .order #cancel:before {
-          position: absolute;
-          content: '';
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          opacity: .3;
-          transition: .3s;
-          border-radius: 10px;
-          box-shadow: inset 2px 2px 4px #000a, inset -2px -2px 4px #ddd; }
-        .container .card .order #cancel:hover {
-          transform: scale(0.95);
-          color: #1f2f56; }
-          .container .card .order #cancel:hover::before {
-            opacity: 1; }
-        .container .card .order #cancel:active {
-          transform: scale(0.9); }
+    transform-origin: left;
+  }
+}
+.container .card .hero:hover img {
+  transition: 0.5s;
+}
+.container .card .card-bottom {
+  padding: 2em 2.5em;
+}
+@media (max-width: 768px) {
+  .container .card .card-bottom {
+    margin: 0.5em auto;
+    padding: 1em 1.5em;
+  }
+}
+.container .card .summary {
+  margin: 0.5em auto;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .container .card .summary {
+    margin: 0 auto;
+  }
+}
+.container .card .summary h1 {
+  margin-bottom: 0.5em;
+  color: #1f2f56;
+  font-weight: 900;
+}
+@media (max-width: 768px) {
+  .container .card .summary h1 {
+    font-size: 1.5em;
+    margin-bottom: 0;
+    padding: 0.5em;
+  }
+}
+.container .card .summary p {
+  color: #7280a7;
+  margin: 1em;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .container .card .summary p {
+    margin: 0.5em;
+  }
+}
+.container .card .plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2em auto;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  background-color: #f5f7ff;
+  padding: 1.5em;
+}
+@media (max-width: 768px) {
+  .container .card .plan {
+    padding: 1em;
+  }
+}
+.container .card .plan .price-plan {
+  flex-basis: 65%;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+@media (max-width: 768px) {
+  .container .card .plan .price-plan {
+    flex-basis: 70%;
+    justify-content: flex-start;
+    padding: 0.3em;
+    gap: 1em;
+  }
+}
+.container .card .plan .price-plan .price h2 {
+  color: #1f2f56;
+  font-size: 1em;
+}
+.container .card .plan .price-plan .price p, .container .card .plan .price-plan .price h2 {
+  font-weight: 900;
+  margin-bottom: 0.3em;
+  color: #1f2f56;
+}
+.container .card .plan .price-plan .price p span, .container .card .plan .price-plan .price h2 span {
+  color: #7280a7;
+  font-weight: 500;
+}
+.container .card .plan .change {
+  align-content: flex-end;
+}
+@media (max-width: 768px) {
+  .container .card .plan .change {
+    font-size: 0.9em;
+  }
+}
+.container .card .plan .change a {
+  color: #fff;
+  padding: 0.3em 0.8em;
+  border-radius: 10px;
+  color: #3829e0;
+  font-weight: 600;
+  font-size: 0.9em;
+  display: block;
+  position: relative;
+  transition: 0.2s;
+}
+.container .card .plan .change a::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  border-radius: 10px;
+}
+.container .card .plan .change a:hover {
+  text-decoration: none;
+  transform: scale(0.97);
+  background-color: #f5f7ff;
+  color: #7280a7;
+}
+.container .card .plan .change a:hover::before {
+  opacity: 0;
+}
+.container .card .plan .change a:hover::after {
+  opacity: 0.3;
+}
+.container .card .plan .change a:active {
+  transition: 0.2s;
+  transform: scale(0.9);
+}
+.container .card .plan .change a:active::after {
+  opacity: 1;
+}
+.container .card .order {
+  margin: 1em auto;
+  display: grid;
+  gap: 1em;
+}
+.container .card .order button {
+  cursor: pointer;
+  transition: 0.2s;
+  border: none;
+  outline: none;
+}
+.container .card .order #proceed {
+  background-color: #3829e0;
+  color: #fff;
+  text-shadow: 1px 0px 2px #000;
+  border-radius: 10px;
+  padding: 1em;
+  font-weight: 600;
+  position: relative;
+  letter-spacing: 0.1em;
+}
+.container .card .order #proceed::before, .container .card .order #proceed::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+.container .card .order #proceed::before {
+  box-shadow: 0 15px 10px #2c29e02f, inset 2px 2px 2px rgba(255, 255, 255, 0.2), inset -2px -2px 2px rgba(0, 0, 0, 0.26);
+}
+.container .card .order #proceed::after {
+  opacity: 0;
+  box-shadow: 0 10px 10px #2c29e02f, inset 2px 2px 2px rgba(0, 0, 0, 0.26), inset -2px -2px 2px rgba(255, 255, 255, 0.2);
+}
+.container .card .order #proceed:hover {
+  transform: scale(0.99);
+  box-shadow: none;
+  background-color: #7280a7;
+}
+.container .card .order #proceed:hover::before {
+  opacity: 0;
+}
+.container .card .order #proceed:hover::after {
+  opacity: 1;
+}
+.container .card .order #proceed:active {
+  transition: 0.2s;
+  transform: scale(0.95);
+}
+.container .card .order #cancel {
+  font-weight: 600;
+  border: none;
+  outline: none;
+  width: auto;
+  padding: 0.2em 1em;
+  margin: 0.3em auto;
+  border-radius: 10px;
+  color: #7280a7;
+  background-color: #fff;
+  position: relative;
+}
+.container .card .order #cancel:active {
+  transform: scale(0.9);
+}
+
+/*# sourceMappingURL=style.css.map */
